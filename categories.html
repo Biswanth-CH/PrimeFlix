@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video Library Management System</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .category {
+        display: flex;
+        padding-left: 100px;
+        padding-top: 20px;
+        flex-wrap: wrap;
+        /* border: solid;
+        border-color: red;*/
+      }
+      .category-item {
+        padding-left: 10px;
+        margin-right: 100px;
+        margin-bottom: 50px;
+        /* border: solid;
+        border-color: green;*/
+      }
+      .category-link {
+        height: 210px;
+        width: 330px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.7s;
+        font-size: 40px;
+        font-weight: bold;
+        /* border: solid;
+        border-color: aqua;*/
+      }
+
+      .category-link:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+        transform: scale(1.15);
+        z-index: 2;
+      }
+      .comedy:hover {
+        transform: scale(1.15);
+      }
+      .drama:hover {
+        transform: scale(1.15);
+      }
+      .action:hover {
+        transform: scale(1.15);
+      }
+      .horror:hover {
+        transform: scale(1.15);
+      }
+      .sci-fi:hover {
+        transform: scale(1.15);
+      }
+      .thriller:hover {
+        transform: scale(1.15);
+      }
+
+      .action {
+        transition: background-color 0.3s, transform 0.7s;
+        position: relative;
+        background-image: url("action.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 210px;
+        width: 330px;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .comedy {
+        transition: background-color 0.3s, transform 0.7s;
+        position: relative;
+        background-image: url("comedy.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 210px;
+        width: 330px;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .drama {
+        transition: background-color 0.3s, transform 0.7s;
+        position: relative;
+        background-image: url("drama.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 210px;
+        width: 330px;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .horror {
+        transition: background-color 0.3s, transform 0.7s;
+        position: relative;
+        background-image: url("horror.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 210px;
+        width: 330px;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sci-fi {
+        transition: background-color 0.3s, transform 0.7s;
+        position: relative;
+        background-image: url("sci-fi.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 210px;
+        width: 330px;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .thriller {
+        transition: background-color 0.3s, transform 0.7s;
+        position: relative;
+        background-image: url("thriller.png");
+        background-size: cover;
+        background-position: center;
+        height: 210px;
+        width: 330px;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .action::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      .action * {
+        position: relative;
+        z-index: 2;
+      }
+      .comedy::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+      .comedy * {
+        position: relative;
+        z-index: 2;
+      }
+      .drama::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+      .drama * {
+        position: relative;
+        z-index: 2;
+      }
+      .horror::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+      .horror * {
+        position: relative;
+        z-index: 2;
+      }
+      .sci-fi::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+      .sci-fi * {
+        position: relative;
+        z-index: 2;
+      }
+      .thriller::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+      .thriller * {
+        position: relative;
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <video autoplay loop muted plays-inline class="back-video">
+      <source src="video backgrounds\jujutsu.mp4" />
+    </video>
+    <h1 class="tt">PrimeFlix</h1>
+   <div class="container">
+        <div class="bar">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="h" href="main.html"><b>Home</b></a>
+                    </li>
+                    <li>
+                        <a class="h" href="tvshows.html"><b>TV Shows</b></a>
+                    </li>
+                    <li>
+                        <a class="h" href="movies.html"><b>Movies</b></a>
+                    </li>
+                    <li>
+                        <a class="h" href="series.html"><b>Series</b></a>
+                    </li>
+                    <li>
+                        <a class="h" href="categories.html"><b>Categories</b></a>
+                    </li>
+                    <li>
+                        <a class="h" href="profile.html"><b>Profile</b></a>
+                    </li>
+                    <li class="search-container">
+                        <input type="text" placeholder="Search...">
+                    </li>
+                    <li class="dropdown">
+                         <a class="button" id="dropdownButton">☰</a>
+                        <div class="dropdown-content">
+                          <a href="profile.html">Profile</a>
+                           <a href="tvshows.html">Tv Shows</a>
+                           <a href="movies.html">Movies</a>
+                           <a href="series.html">Series</a>
+                           <a href="categories.html">Categories</a>
+                           <a href="login.html">Logout</a>
+                    </div>
+                </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+      <div class="videos">
+        <h1>Categories</h1>
+        <div class="category">
+          <div class="category-item">
+            <div class="action">
+              <a href="#" class="category-link a">Action</a>
+            </div>
+          </div>
+          <div class="category-item">
+            <div class="comedy">
+              <a href="#" class="category-link">Comedy</a>
+            </div>
+          </div>
+          <div class="category-item">
+            <div class="drama">
+              <a href="#" class="category-link">Drama</a>
+            </div>
+          </div>
+          <div class="category-item">
+            <div class="horror">
+              <a href="#" class="category-link">Horror</a>
+            </div>
+          </div>
+          <div class="category-item">
+            <div class="sci-fi">
+              <a href="#" class="category-link">Sci-Fi</a>
+            </div>
+          </div>
+          <div class="category-item">
+            <div class="thriller">
+              <a href="#" class="category-link">Thriller</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

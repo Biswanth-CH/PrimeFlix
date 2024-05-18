@@ -1,0 +1,283 @@
+body {
+  top: 0;
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.container {
+  text-align: left;
+  margin: 0;
+  margin-left: 10px;
+  padding: 30px;
+  padding-left: 0%;
+  padding-top: 0%;
+  position: sticky;
+  /* border: solid;
+  border-color: white;*/
+}
+li {
+  padding: 0px;
+}
+.h {
+  border-radius: 22px;
+  transition: padding 0.45s ease, background 0.25s ease, color 0.25s ease;
+  padding: 0; /* Initially no padding */
+}
+.h:hover {
+  padding: 10px;
+  background: rgb(0, 108, 209);
+  backdrop-filter: blur(9px);
+  color: white;
+  border-radius: 22px;
+}
+
+nav ul {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 20px; /* Adjust this value to move the title downwards */
+}
+nav ul li {
+  display: inline;
+  margin-right: 85px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.movie-list {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding-top: 10px;
+  /*border: solid;
+  border-color: blue;*/
+}
+.movie-list::-webkit-scrollbar {
+  display: none;
+}
+.movie-item {
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  /*border: solid;
+  border-color: red;*/
+}
+.movie-description {
+  text-shadow: 0px 0px 11px white, 0px 0px 50px blue, 0px 0px 30px black;
+  padding-left: 15px;
+  padding-bottom: 1px;
+  padding-right: 15px;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  opacity: 0.92;
+  border-radius: 10px; /* Rounded corners */
+  /* border: solid;
+  border-color: green;*/
+}
+.thumbnail {
+  opacity: 1;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  width: 200px;
+  height: 350px;
+  transition: transform 0.5s;
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 0%;
+  /* border: solid;
+  border-color: violet;*/
+}
+.thumbnail img {
+  opacity: 1;
+  display: flex;
+  max-width: 100%; /* Ensure image fits within the container */
+  max-height: 100%; /* Ensure image fits within the container */
+  border-radius: 5px;
+}
+.thumbnail:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: flex; /* Change the display to flex to keep the items in a single row */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    justify-content: left; /* Center items horizontally */
+  }
+
+  nav ul li {
+    display: inline-block; /* Ensure the navigation links remain inline-block */
+    margin-right: auto; /* Adjust margin if needed */
+  }
+}
+.bar {
+  padding-top: 32px;
+  padding-bottom: 10px;
+  height: 60px;
+  width: 1600px;
+  left: 0;
+  top: 0;
+  border-radius: 0px;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background color */
+  backdrop-filter: blur(10px) opacity(0.8); /* Adjust blur intensity and opacity */
+  position: fixed;
+  z-index: 100; /* Set a high z-index for the navigation bar */
+  /* border: solid;
+  border-color: orange;*/
+}
+.bar nav {
+  font-size: 15px;
+  padding-top: 30px;
+  padding-left: 270px;
+  padding-right: 50px;
+  position: absolute;
+  top: 0;
+  /* Adjust this value to position items from the right edge */
+}
+.videos {
+  margin-top: 110px;
+  text-align: left;
+  padding-left: 20px;
+  /* border: solid;
+  border-color: yellow;*/
+}
+.videos h1 {
+  color: #0080f7;
+  padding: 10px 20px; /* Padding for button-like appearance */
+  border-radius: 10px; /* Rounded corners */
+  display: inline-block; /* Make the heading behave like a block element */
+}
+.back-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+.ads {
+  height: 450px;
+  width: 1450px;
+  background-image: url("1.jpg");
+  background-size: cover;
+  border-radius: 20px;
+  border: double;
+  border-width: 4px;
+  border-color: rgb(255, 255, 255, 0.7);
+}
+.tt {
+  color: #0080f7;
+  font-size: 30px;
+  padding: 10px;
+  border: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  position: fixed; /* Position the title absolutely */
+  top: 0px; /* Adjust the top position as needed */
+  left: 30px; /* Adjust the left position as needed */
+  z-index: 1; /* Ensure the title displays over other elements */
+}
+.hamburger-menu {
+  display: none;
+}
+.back-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+/* Basic button styles */
+.button {
+  border-radius: 22px;
+  transition: padding 0.45s ease, background 0.25s ease, color 0.25s ease;
+  padding: 0;
+}
+
+.button:hover {
+  padding: 10px;
+  background: rgb(0, 108, 209);
+  backdrop-filter: blur(9px);
+  color: white;
+  border-radius: 22px;
+}
+
+/* Dropdown menu styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(199, 192, 192, 0.7);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+  margin-top: 20px; /* Position dropdown below the button */
+  margin-right: 80px;
+  right: 0; /* Align dropdown to the right edge */
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Show the dropdown menu when .show is added */
+.dropdown-content.show {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  /* Hide the TV Shows, Movies, Series, and Profile tabs */
+  .bar nav ul li:nth-child(2),
+  .bar nav ul li:nth-child(4),
+  .bar nav ul li:nth-child(6) {
+    display: none;
+  }
+  .bar nav ul li:nth-child(1),
+  .bar nav ul li:nth-child(3),
+  .bar nav ul li:nth-child(5) {
+    padding-right: 40px; /* Adjust the margin as needed */
+  }
+  .bar nav ul li.search-container input[type="text"] {
+    width: 100px;
+    height: 15px;
+    border-radius: 9px;
+    padding-left: 5px;
+  }
+  .bar nav ul li.search-container {
+    margin-right: 40px;
+  }
+}
+.bar nav ul li.search-container input[type="text"] {
+  height: 1p9x;
+  border-radius: 9px;
+  padding-left: 5px;
+}

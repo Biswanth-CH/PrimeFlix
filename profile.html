@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video Library Management System</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+      }
+      .profile-photo img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+      }
+      .profile-details p strong {
+        font-size: 18px; /* Adjust font size as needed */
+        font-weight: bold;
+        color: #195d7d; /* Same color as the logo */
+        display: inline-block; /* Ensure each heading is on a new line */
+        margin-right: 10px; /* Add some spacing between the headings */
+      }
+      .heading {
+        color: #195d7d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <video autoplay loop muted plays-inline class="back-video">
+      <source src="video backgrounds\jujutsu.mp4" />
+    </video>
+    <h1 class="tt">PrimeFlix</h1>
+
+    <div class="container">
+        <div class="bar">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="h" href="main.html"><b>Home</b></a>
+                    </li>
+                    <li>
+                        <a class="h" href="tvshows.html"><b>TV Shows</b></a>
+                    </li>
+                    <li>
+                        <a class="h" href="movies.html"><b>Movies</b></a>
+                    </li>
+                    <li>
+                        <a class="h" href="series.html"><b>Series</b></a>
+                    </li>
+                    <li>
+                        <a class="h" href="categories.html"><b>Categories</b></a>
+                    </li>
+                    <li>
+                        <a class="h" href="profile.html"><b>Profile</b></a>
+                    </li>
+                    <li class="search-container">
+                        <input type="text" placeholder="Search...">
+                    </li>
+                    <li class="dropdown">
+                         <a class="button" id="dropdownButton">☰</a>
+                        <div class="dropdown-content">
+                          <a href="profile.html">Profile</a>
+                           <a href="tvshows.html">Tv Shows</a>
+                           <a href="movies.html">Movies</a>
+                           <a href="series.html">Series</a>
+                           <a href="categories.html">Categories</a>
+                           <a href="login.html">Logout</a>
+                    </div>
+                </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+      <div class="videos">
+        <h1 class="heading">User Profile</h1>
+        <div class="profile-info">
+          <div class="profile-photo">
+            <img src="profile-pic.jpg" class="Thumbnail" />
+          </div>
+          <div class="profile-details">
+            <p><strong>Name:</strong> Biswanth Ch</p>
+            <p><strong>Email:</strong> biswanthch@gmail.com</p>
+            <p><strong>Phone Number:</strong> +91 8330965896</p>
+            <p><strong>Subscription Plan:</strong> Premium</p>
+            <p><strong>Plan Details:</strong> 4K, 6 Devices, Ad free</p>
+            <p><strong>Location:</strong> Guntur, Andhra Pradesh, India</p>
+            <p><strong>User Type:</strong> Adult</p>
+            <!-- Add more profile information as needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
