@@ -76,7 +76,8 @@ nav ul li a {
   margin-left: 20px;
   margin-right: 20px;
   opacity: 0.92;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 10px; 
+  /* Rounded corners */
   /* border: solid;
   border-color: green;*/
 }
