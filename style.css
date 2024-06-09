@@ -78,7 +78,7 @@ nav ul li a {
   opacity: 0.92;
   border-radius: 10px; 
   /* Rounded corners */
-  /* border: solid;
+  /*border: solid;
   border-color: green;*/
 }
 .thumbnail {
@@ -92,7 +92,7 @@ nav ul li a {
   overflow: hidden;
   margin: auto;
   margin-bottom: 0%;
-  /* border: solid;
+  /*border: solid;
   border-color: violet;*/
 }
 .thumbnail img {
@@ -149,7 +149,7 @@ nav ul li a {
   margin-top: 110px;
   text-align: left;
   padding-left: 20px;
-  /* border: solid;
+  /*border: solid;
   border-color: yellow;*/
 }
 .videos h1 {
@@ -278,7 +278,112 @@ nav ul li a {
   }
 }
 .bar nav ul li.search-container input[type="text"] {
-  height: 1p9x;
+  height: 19px;
   border-radius: 9px;
   padding-left: 5px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1440px) and (min-width: 320px) and (min-resolution: 3dppx) {
+  nav ul {
+    display: flex; /* Change the display to flex to keep the items in a single row */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    justify-content: left; /* Center items horizontally */
+    padding-right: 2px;
+  }
+
+  nav ul li {
+    display: inline-block; /* Ensure the navigation links remain inline-block */
+    margin-right: auto; /* Adjust margin if needed */
+  }
+
+  /* Hide the TV Shows, Movies, Series, and Profile tabs */
+  .bar nav ul li:nth-child(2),
+  .bar nav ul li:nth-child(4),
+  .bar nav ul li:nth-child(6) {
+    display: none;
+  }
+
+  .bar nav ul li:nth-child(1),
+  .bar nav ul li:nth-child(3),
+  .bar nav ul li:nth-child(5) {
+    padding-right: 40px; /* Adjust the margin as needed */
+  }
+
+  .bar nav ul li.search-container input[type="text"] {
+    width: 100px;
+    height: 15px;
+    border-radius: 9px;
+    padding-left: 5px;
+  }
+
+  .bar nav ul li.search-container {
+    margin-right: 40px;
+  }
+
+  .bar{
+    height: 100px;
+  }
+
+  .movie-list {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 700px;
+
+  }
+
+  .movie-item{
+    height: 670px;
+    width: 500px;
+  }
+
+  .thumbnail {
+    width: 450px;
+    height: 550px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will ensure the image covers the entire area, maintaining aspect ratio */
+    border-radius: 5px;
+  }
+
+  .movie-description {
+    margin-left: 10px;
+    margin-right: 10px;
+    
+  }
+
+  .videos {
+    width: 1450px;
+    height: 3100px;
+  }
+
+ h1{
+  font-size: 70px;
+  }
+
+  .bar nav ul li{
+    margin: 2px;
+    padding: 2px;
+    font-size: 30px;
+  }
+
+  .bar nav ul{
+    padding-left: 160px;
+  }
+
+  .tt{
+    font-size: 50px;
+  }
+  
 }
